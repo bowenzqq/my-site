@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=2.0, user-scalable=yes">
     <title>大横智旋 (苏州) 科技有限公司 - 产品手册</title>
-    <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入 FontAwesome 图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
@@ -28,13 +26,10 @@
         }
     </script>
     <style>
-        /* 移动端适配：固定最小宽度，让页面可以缩放 */
         body {
             min-width: 1400px;
             overflow-x: auto;
         }
-        
-        /* 自定义一些细节样式 */
         .bg-wave {
             background: linear-gradient(135deg, #ffffff 0%, #e6f0fa 100%);
         }
@@ -49,45 +44,35 @@
         table tr:nth-child(even) {
             background-color: #f3f4f6;
         }
-        
-        /* 确保所有表格宽度铺满 */
         table {
             width: 100% !important;
             table-layout: fixed;
         }
-        
-        /* 移动端优化：确保图片不会溢出 */
         img {
             max-width: 100%;
             height: auto;
         }
+        .blue-header { background-color: #004a8f; }
+        .blue-text { color: #004a8f; }
+        .font-song { font-family: "SimSun", "Songti SC", "Noto Serif SC", serif; }
+        @keyframes pulse-slow { 0%, 100% { box-shadow: 0 0 20px rgba(255,255,255,0.1); } 50% { box-shadow: 0 0 40px rgba(255,255,255,0.3); } }
+        .animate-pulse-slow { animation: pulse-slow 4s infinite; }
     </style>
 </head>
 <body class="text-gray-800 bg-gray-50">
 
-        <!-- ==================== 1. 封面 (Cover) [明亮原色版] ==================== -->
+    <!-- 封面 -->
     <section class="relative w-full min-h-screen overflow-hidden flex flex-col justify-between">
-        
-        <!-- layer 0: 全屏背景图层 (无滤镜，保持原色) -->
         <div class="absolute inset-0 z-0">
-            <img 
-            src=""  alt="Background" 
-                class="w-full h-full object-cover object-center"
-            >
+            <img src="" alt="Background" class="w-full h-full object-cover object-center">
         </div>
-
-        <!-- layer 1: 内容层 -->
         <div class="relative z-10 flex flex-col h-full justify-between min-h-screen">
-            
-            <!-- 顶部 Logo -->
             <div class="p-10 text-right">
                 <div class="inline-block text-left">
                     <h1 class="text-3xl font-bold text-brand-dark tracking-widest">大横智旋 <i class="fa-solid fa-fan text-brand-accent"></i></h1>
                     <p class="text-xs text-gray-500 tracking-[0.3em] uppercase">Daheng Zhixuan</p>
                 </div>
             </div>
-
-            <!-- 中间核心文字 -->
             <div class="container mx-auto px-10 flex items-center mt-10 md:mt-0">
                 <div class="w-full md:w-2/3 space-y-6">
                     <h2 class="text-5xl md:text-6xl font-bold text-brand-primary leading-tight drop-shadow-lg bg-white/30 backdrop-blur-[2px] inline-block p-2 rounded-lg md:bg-transparent md:backdrop-blur-none md:p-0">
@@ -102,8 +87,6 @@
                     </p>
                 </div>
             </div>
-
-            <!-- 底部联系信息 -->
             <div class="bg-white/70 backdrop-blur-md border-t border-white/40 p-8 mt-10 shadow-[0_-5px_20px_rgba(0,0,0,0.05)]">
                 <div class="container mx-auto flex flex-col md:flex-row justify-between items-end">
                     <div class="space-y-3 text-sm text-brand-dark font-bold">
@@ -112,47 +95,30 @@
                         <p><i class="fa-solid fa-phone w-6 text-brand-accent"></i> 17625008062</p>
                         <p><i class="fa-solid fa-envelope w-6 text-brand-accent"></i> liyong@dhzxtech.com</p>
                     </div>
-                    
-                    <!-- 二维码区域 -->
                     <div class="flex gap-4 mt-4 md:mt-0">
                         <div class="text-center">
-                            <img 
-                                src=""         class="w-24 h-24 border-2 border-white p-1 bg-white/90 shadow-sm"
-                            >
+                            <img src="" class="w-24 h-24 border-2 border-white p-1 bg-white/90 shadow-sm">
                         </div>
                         <div class="text-center">
-                            <img 
-                                src=""         class="w-24 h-24 border-2 border-white p-1 bg-white/90 shadow-sm"
-                            >
+                            <img src="" class="w-24 h-24 border-2 border-white p-1 bg-white/90 shadow-sm">
                         </div>
                     </div>
                 </div>
             </div>
-            
             <div class="absolute bottom-0 left-0 w-full h-2 bg-[#0056b3]"></div>
         </div>
     </section>
 
-
-    <!-- ==================== 2. 目录 (Contents) ==================== -->
+    <!-- 目录 -->
     <section class="flex flex-col md:flex-row h-screen w-full overflow-hidden">
-        <!-- 左侧图片区域 -->
         <div class="w-full md:w-1/2 h-1/2 md:h-full relative bg-gray-900">
-            <img 
-                src=""      alt="eVTOL Aircraft" 
-                class="w-full h-full object-cover object-left"
-            >
+            <img src="" alt="eVTOL Aircraft" class="w-full h-full object-cover object-left">
         </div>
-        
-        <!-- 右侧目录列表区域 -->
         <div class="w-full md:w-1/2 bg-white p-10 md:p-20 flex flex-col justify-center">
-            <!-- 标题部分 -->
             <div class="mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold text-[#0056b3] mb-2">目录</h2>
                 <p class="text-xl text-gray-500 uppercase tracking-[0.2em] font-light">CONTENTS</p>
             </div>
-            
-            <!-- 列表部分 -->
             <div class="space-y-10">
                 <div class="group flex items-start gap-6 cursor-pointer hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-4xl md:text-5xl font-bold text-gray-800 group-hover:text-[#0056b3] transition-colors leading-none">01</span>
@@ -161,7 +127,6 @@
                         <p class="text-xs text-gray-400 uppercase mt-1">Company profile</p>
                     </div>
                 </div>
-
                 <div class="group flex items-start gap-6 cursor-pointer hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-4xl md:text-5xl font-bold text-gray-800 group-hover:text-[#0056b3] transition-colors leading-none">02</span>
                     <div class="border-b border-gray-300 flex-grow pb-4 pt-2">
@@ -169,7 +134,6 @@
                         <p class="text-xs text-gray-400 uppercase mt-1">Company business segments</p>
                     </div>
                 </div>
-
                 <div class="group flex items-start gap-6 cursor-pointer hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-4xl md:text-5xl font-bold text-gray-800 group-hover:text-[#0056b3] transition-colors leading-none">03</span>
                     <div class="border-b border-gray-300 flex-grow pb-4 pt-2">
@@ -177,7 +141,6 @@
                         <p class="text-xs text-gray-400 uppercase mt-1">Standard Parts Product Series</p>
                     </div>
                 </div>
-
                 <div class="group flex items-start gap-6 cursor-pointer hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-4xl md:text-5xl font-bold text-gray-800 group-hover:text-[#0056b3] transition-colors leading-none">04</span>
                     <div class="border-b border-gray-300 flex-grow pb-4 pt-2">
@@ -189,91 +152,54 @@
         </div>
     </section>
 
-
-
-        <!-- ==================== 2. 公司简介与业务板块 ==================== -->
+    <!-- 公司简介与业务板块 -->
     <section class="relative w-full min-h-screen flex items-center justify-center py-10 md:py-20 overflow-hidden bg-[#f0f4f8]">
-        
-        <!-- 1. 底层背景 -->
         <div class="absolute inset-0 z-0 bg-[#003366]">
-             <img 
-             src=""    alt="Background" 
-                class="w-full h-full object-cover opacity-100"
-            >
+            <img src="" alt="Background" class="w-full h-full object-cover opacity-100">
         </div>
-
-        <!-- 2. 中间白色卡片区域 -->
         <div class="relative z-10 container mx-auto max-w-[1400px] bg-white/95 backdrop-blur-sm shadow-2xl flex flex-col md:flex-row min-h-[650px]">
-            
-            <!-- 左侧：公司简介 -->
             <div class="w-full md:w-1/2 p-12 md:p-16 flex flex-col border-r border-gray-100">
-                
                 <div class="text-center mb-6">
-                    <h2 class="text-4xl font-bold text-[#003366] tracking-widest mb-2" style="font-family: 'SimSun', 'Songti SC', serif;">公司简介</h2>
+                    <h2 class="text-4xl font-bold text-[#003366] tracking-widest mb-2 font-song">公司简介</h2>
                     <p class="text-xs font-bold text-gray-600 uppercase tracking-[0.1em] font-sans">Company Profile</p>
                     <div class="w-8 h-1 bg-[#0056b3] mx-auto mt-3"></div>
                 </div>
-
                 <p class="text-sm text-[#333333] leading-7 text-justify mb-8 tracking-wide font-normal">
                     大横智旋（苏州）科技有限公司是一家以旋翼/螺旋桨设计为核心根基，深耕航空电推进装置领域，面向电动航空器性能提升场景，提供从技术研发、系统集成到产业化全链条解决方案的创新型高科技企业。公司核心研发团队源自西北工业大学等国内外航空航天与流体力学领域的顶尖学者。
                 </p>
-
                 <div class="flex-grow flex items-center justify-center mt-2">
-                    <img 
-                    src= "" alt="发展历程" 
-                        class="w-full max-w-[550px] object-contain"
-                    >
+                    <img src="" alt="发展历程" class="w-full max-w-[550px] object-contain">
                 </div>
             </div>
-
-            <!-- 右侧：业务板块 -->
             <div class="w-full md:w-1/2 bg-transparent p-12 md:p-16 flex flex-col items-center">
-                
                 <div class="text-center mb-10">
-                    <h2 class="text-4xl font-bold text-[#003366] tracking-widest mb-2" style="font-family: 'SimSun', 'Songti SC', serif;">业务板块</h2>
+                    <h2 class="text-4xl font-bold text-[#003366] tracking-widest mb-2 font-song">业务板块</h2>
                     <p class="text-xs font-bold text-gray-600 uppercase tracking-[0.1em] font-sans">Business Segment</p>
                     <div class="w-8 h-1 bg-[#0056b3] mx-auto mt-3"></div>
                 </div>
-
                 <div class="flex-grow flex items-center justify-center w-full">
-                    <img 
-                    src="" alt="业务循环" 
-                        class="w-full max-w-[500px] object-contain"
-                    >
+                    <img src="" alt="业务循环" class="w-full max-w-[500px] object-contain">
                 </div>
             </div>
         </div>
     </section>
 
-
-
-
-             <!-- ==================== 3. 标准件货架产品 ==================== -->
+    <!-- 标准件货架产品 -->
     <section class="w-full bg-gray-100 py-10 flex justify-center overflow-hidden">
-        
-        <!-- 核心容器 -->
         <div class="w-full max-w-[1400px] bg-white shadow-2xl flex flex-col md:flex-row overflow-hidden">
-            
-            <!-- 左页：参数总表 -->
             <div class="w-full md:w-1/2 p-8 md:p-12 pb-40 border-r border-gray-200 relative flex flex-col">
-                
-                <!-- 顶部页眉条 -->
                 <div class="absolute top-0 left-0 w-full h-8 bg-gray-50 border-b border-gray-200 flex items-center justify-between px-4 overflow-hidden">
                     <div class="bg-[#004a8f] text-white text-[10px] px-4 h-full flex items-center skew-x-12 -ml-4">
                         <span class="-skew-x-12 pl-2">大横智旋 (苏州) 科技有限公司</span>
                     </div>
                     <span class="text-[10px] text-gray-500">专注电驱螺旋桨技术创新，赋能绿色航空飞行实践</span>
                 </div>
-
-                <!-- 标题区域 -->
                 <div class="mt-8 mb-6">
                     <h3 class="text-xs text-gray-400 uppercase tracking-wider font-sans">STANDARD PARTS SHELF PRODUCT LIST - ROTOR BLADES</h3>
                     <h2 class="text-3xl font-bold text-[#004a8f] mt-1 flex items-center gap-2">
                         标准件货架产品列表 <span class="h-[2px] w-10 bg-gray-300 block"></span> <span class="text-gray-600">旋翼桨</span>
                     </h2>
                 </div>
-
-                <!-- 核心表格 -->
                 <div class="w-full overflow-x-auto flex-grow">
                     <table class="w-full text-sm text-center border-collapse">
                         <thead>
@@ -285,423 +211,174 @@
                             </tr>
                         </thead>
                         <tbody class="text-gray-600">
-                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors">
-                                <td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">直径</td>
-                                <td>54 英寸</td>
-                                <td class="bg-gray-50">63 英寸</td>
-                                <td>72 英寸</td>
-                            </tr>
-                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors">
-                                <td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">叶片数量</td>
-                                <td>2</td>
-                                <td class="bg-gray-50">2</td>
-                                <td>2</td>
-                            </tr>
-                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors">
-                                <td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">单支桨重量 (g)</td>
-                                <td>650±50</td>
-                                <td class="bg-gray-50">830±50</td>
-                                <td>1850±80</td>
-                            </tr>
-                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors">
-                                <td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">材质</td>
-                                <td>碳纤维复合材料</td>
-                                <td class="bg-gray-50">碳纤维复合材料</td>
-                                <td>碳纤维复合材料</td>
-                            </tr>
-                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors">
-                                <td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">旋转方向</td>
-                                <td>逆时针 / 顺时针</td>
-                                <td class="bg-gray-50">逆时针 / 顺时针</td>
-                                <td>逆时针 / 顺时针</td>
-                            </tr>
-                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors">
-                                <td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">额定拉力</td>
-                                <td>50.6kg@2200RPM</td>
-                                <td class="bg-gray-50">70kg @ 2000 RPM</td>
-                                <td>95 kg @ 1800 RPM</td>
-                            </tr>
-                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors">
-                                <td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">额定扭矩</td>
-                                <td>34.7N.m@8kW</td>
-                                <td class="bg-gray-50">51N·m @ 10.7 kW</td>
-                                <td>75 N·m @ 14 kW</td>
-                            </tr>
-                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors">
-                                <td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">最大拉力</td>
-                                <td>110kg@3200RPM</td>
-                                <td class="bg-gray-50">158kg @ 3000 RPM</td>
-                                <td>180 kg @ 2500 RPM</td>
-                            </tr>
-                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors">
-                                <td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">最大扭矩</td>
-                                <td>76N.m@25.4KW</td>
-                                <td class="bg-gray-50">116 N·m @ 36.3 kW</td>
-                                <td>142 N·m @ 37 kW</td>
-                            </tr>
-                             <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors">
-                                <td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">转速 (RPM) 范围</td>
-                                <td>≤ 3200</td>
-                                <td class="bg-gray-50">≤ 3000</td>
-                                <td>≤ 2500</td>
-                            </tr>
-                             <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors">
-                                <td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">使用环境温度 (°C)</td>
-                                <td>-40 至 +80</td>
-                                <td class="bg-gray-50">-40 至 +80</td>
-                                <td>-40 至 +80</td>
-                            </tr>
-                             <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors">
-                                <td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">保存温度 (°C)</td>
-                                <td>-10 ~ 35</td>
-                                <td class="bg-gray-50">-10 ~ 35</td>
-                                <td>-10 ~ 35</td>
-                            </tr>
-                             <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors">
-                                <td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">保存湿度 (%)</td>
-                                <td>20 ~ 90</td>
-                                <td class="bg-gray-50">20 ~ 90</td>
-                                <td>20 ~ 90</td>
-                            </tr>
+                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors"><td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">直径</td><td>54 英寸</td><td class="bg-gray-50">63 英寸</td><td>72 英寸</td></tr>
+                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors"><td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">叶片数量</td><td>2</td><td class="bg-gray-50">2</td><td>2</td></tr>
+                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors"><td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">单支桨重量 (g)</td><td>650±50</td><td class="bg-gray-50">830±50</td><td>1850±80</td></tr>
+                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors"><td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">材质</td><td>碳纤维复合材料</td><td class="bg-gray-50">碳纤维复合材料</td><td>碳纤维复合材料</td></tr>
+                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors"><td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">旋转方向</td><td>逆时针 / 顺时针</td><td class="bg-gray-50">逆时针 / 顺时针</td><td>逆时针 / 顺时针</td></tr>
+                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors"><td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">额定拉力</td><td>50.6kg@2200RPM</td><td class="bg-gray-50">70kg @ 2000 RPM</td><td>95 kg @ 1800 RPM</td></tr>
+                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors"><td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">额定扭矩</td><td>34.7N.m@8kW</td><td class="bg-gray-50">51N·m @ 10.7 kW</td><td>75 N·m @ 14 kW</td></tr>
+                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors"><td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">最大拉力</td><td>110kg@3200RPM</td><td class="bg-gray-50">158kg @ 3000 RPM</td><td>180 kg @ 2500 RPM</td></tr>
+                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors"><td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">最大扭矩</td><td>76N.m@25.4KW</td><td class="bg-gray-50">116 N·m @ 36.3 kW</td><td>142 N·m @ 37 kW</td></tr>
+                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors"><td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">转速 (RPM) 范围</td><td>≤ 3200</td><td class="bg-gray-50">≤ 3000</td><td>≤ 2500</td></tr>
+                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors"><td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">使用环境温度 (°C)</td><td>-40 至 +80</td><td class="bg-gray-50">-40 至 +80</td><td>-40 至 +80</td></tr>
+                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors"><td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">保存温度 (°C)</td><td>-10 ~ 35</td><td class="bg-gray-50">-10 ~ 35</td><td>-10 ~ 35</td></tr>
+                            <tr class="h-10 border-b border-dashed border-gray-300 hover:bg-blue-50 transition-colors"><td class="bg-gray-50 font-medium text-left pl-6 text-gray-700">保存湿度 (%)</td><td>20 ~ 90</td><td class="bg-gray-50">20 ~ 90</td><td>20 ~ 90</td></tr>
                         </tbody>
                     </table>
                 </div>
-                
                 <div class="w-full h-10 shrink-0"></div>
             </div>
-
-            <!-- 右页：单品详情 -->
             <div class="w-full md:w-1/2 p-8 md:p-12 pb-40 relative bg-white flex flex-col">
-                
-                <!-- 顶部页眉条 -->
                 <div class="absolute top-0 right-0 w-full h-8 bg-gray-50 border-b border-gray-200 flex items-center justify-between px-4 overflow-hidden flex-row-reverse">
                     <div class="bg-[#004a8f] text-white text-[10px] px-4 h-full flex items-center skew-x-12 -mr-4">
                         <span class="-skew-x-12 pr-2">大横智旋 (苏州) 科技有限公司</span>
                     </div>
                     <span class="text-[10px] text-gray-500">专注电驱螺旋桨技术创新，赋能绿色航空飞行实践</span>
                 </div>
-
-                <!-- 标题区域 -->
                 <div class="mt-8 mb-6">
                     <h3 class="text-xs text-gray-400 uppercase tracking-wider font-sans">PERFORMANCE INDEX - DX-Y54A</h3>
                     <h2 class="text-3xl font-bold text-[#004a8f] mt-1">DX-Y54A</h2>
                     <div class="w-12 h-1 bg-[#004a8f] mt-2"></div>
                 </div>
-
-                <!-- 1. 顶部图片展示区 -->
                 <div class="grid grid-cols-2 gap-4 mb-6 h-48 shrink-0">
                     <div class="border border-gray-300 p-2 flex items-center justify-center bg-white">
-                        <img 
-                            src=""   alt="Technical Drawing" 
-                            class="max-w-full max-h-full object-contain"
-                        >
+                        <img src="" alt="Technical Drawing" class="max-w-full max-h-full object-contain">
                     </div>
                     <div class="border border-gray-300 p-2 flex items-center justify-center bg-gray-100">
-                        <img 
-                            src=""              alt="Product Photo" 
-                            class="max-w-full max-h-full object-contain mix-blend-multiply"
-                        >
+                        <img src="" alt="Product Photo" class="max-w-full max-h-full object-contain mix-blend-multiply">
                     </div>
                 </div>
-
-                <!-- 2. 中间参数小表格 -->
                 <div class="mb-8 shrink-0">
-                    <div class="bg-[#004a8f] text-white text-center py-2 font-bold text-sm">
-                        DX-Y54A 碳纤维复合材料航空螺旋桨
-                    </div>
+                    <div class="bg-[#004a8f] text-white text-center py-2 font-bold text-sm">DX-Y54A 碳纤维复合材料航空螺旋桨</div>
                     <div class="flex w-full text-xs text-center border border-gray-300 border-t-0">
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">直径</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">54 英寸<br>(约 1370 mm)</div>
-                        </div>
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定拉力</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">50.6kg@<br>2200RPM</div>
-                        </div>
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定力效</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">6.3g/W</div>
-                        </div>
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定扭矩</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">34.7N.m@<br>8kW</div>
-                        </div>
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">最大拉力</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">110kg@<br>3200RPM</div>
-                        </div>
-                         <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">最大扭矩</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">76N.m@<br>25.4KW</div>
-                        </div>
-                        <div class="flex-1">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">适配电机</div>
-                            <div class="py-2 px-1 flex flex-col justify-center h-24 text-[10px]">
-                                <span>额定功率 9KW</span>
-                                <span>最大功率 28KW</span>
-                            </div>
-                        </div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">直径</div><div class="py-4 px-1 flex items-center justify-center h-24">54 英寸<br>(约 1370 mm)</div></div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定拉力</div><div class="py-4 px-1 flex items-center justify-center h-24">50.6kg@<br>2200RPM</div></div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定力效</div><div class="py-4 px-1 flex items-center justify-center h-24">6.3g/W</div></div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定扭矩</div><div class="py-4 px-1 flex items-center justify-center h-24">34.7N.m@<br>8kW</div></div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">最大拉力</div><div class="py-4 px-1 flex items-center justify-center h-24">110kg@<br>3200RPM</div></div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">最大扭矩</div><div class="py-4 px-1 flex items-center justify-center h-24">76N.m@<br>25.4KW</div></div>
+                        <div class="flex-1"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">适配电机</div><div class="py-2 px-1 flex flex-col justify-center h-24 text-[10px]"><span>额定功率 9KW</span><span>最大功率 28KW</span></div></div>
                     </div>
                 </div>
-
-                <!-- 3. 底部两栏 -->
                 <div class="grid grid-cols-2 gap-6 h-64 shrink-0">
-                    
                     <div class="flex flex-col h-full">
-                        <h4 class="text-[#004a8f] font-bold text-sm mb-2 flex items-center">
-                            <span class="w-2 h-2 rounded-full bg-[#004a8f] mr-2"></span> 应用场景
-                        </h4>
+                        <h4 class="text-[#004a8f] font-bold text-sm mb-2 flex items-center"><span class="w-2 h-2 rounded-full bg-[#004a8f] mr-2"></span> 应用场景</h4>
                         <div class="border border-gray-400 flex-grow flex items-center justify-center p-4">
-                            <img 
-                                src=""                             alt="Application Scenarios" 
-                                class="w-full h-full object-contain"
-                            >
+                            <img src="" alt="Application Scenarios" class="w-full h-full object-contain">
                         </div>
                     </div>
-
                     <div class="flex flex-col h-full">
-                        <h4 class="text-[#004a8f] font-bold text-sm mb-2 flex items-center">
-                            <span class="w-2 h-2 rounded-full bg-[#004a8f] mr-2"></span> 性能曲线
-                        </h4>
+                        <h4 class="text-[#004a8f] font-bold text-sm mb-2 flex items-center"><span class="w-2 h-2 rounded-full bg-[#004a8f] mr-2"></span> 性能曲线</h4>
                         <div class="border border-gray-400 flex-grow p-2 flex items-center justify-center">
-                            <img 
-                                src=""                        alt="Performance Chart" 
-                                class="w-full h-full object-contain"
-                            >
+                            <img src="" alt="Performance Chart" class="w-full h-full object-contain">
                         </div>
                     </div>
                 </div>
-
                 <div class="w-full h-10 shrink-0"></div>
-
             </div>
         </div>
     </section>
 
-
-        <!-- ==================== 5-6. DX-Y63A & DX-Y72C 详情页 ==================== -->
+    <!-- Y63A & Y72C -->
     <section class="w-full bg-gray-100 py-10 flex justify-center overflow-hidden">
-        
         <div class="w-full max-w-[1400px] bg-white shadow-2xl flex flex-col md:flex-row overflow-hidden">
-            
-            <!-- 左页：DX-Y63A -->
             <div class="w-full md:w-1/2 p-8 md:p-12 pb-40 border-r border-gray-200 relative flex flex-col">
-                
                 <div class="absolute top-0 left-0 w-full h-8 bg-gray-50 border-b border-gray-200 flex items-center justify-between px-4 overflow-hidden">
-                    <div class="bg-[#004a8f] text-white text-[10px] px-4 h-full flex items-center skew-x-12 -ml-4">
-                        <span class="-skew-x-12 pl-2">大横智旋 (苏州) 科技有限公司</span>
-                    </div>
+                    <div class="bg-[#004a8f] text-white text-[10px] px-4 h-full flex items-center skew-x-12 -ml-4"><span class="-skew-x-12 pl-2">大横智旋 (苏州) 科技有限公司</span></div>
                     <span class="text-[10px] text-gray-500">专注电驱螺旋桨技术创新，赋能绿色航空飞行实践</span>
                 </div>
-
                 <div class="mt-8 mb-6">
                     <h3 class="text-xs text-gray-400 uppercase tracking-wider font-sans">PERFORMANCE INDEX - DX-Y63A</h3>
                     <h2 class="text-3xl font-bold text-[#004a8f] mt-1">DX-Y63A</h2>
                     <div class="w-12 h-1 bg-[#004a8f] mt-2"></div>
                 </div>
-
                 <div class="grid grid-cols-2 gap-4 mb-6 h-48 shrink-0">
-                    <div class="border border-gray-300 p-2 flex items-center justify-center bg-white">
-                        <img 
-                        src=""                    
-                        class="max-w-full max-h-full object-contain">
-                    </div>
-                    <div class="border border-gray-300 p-2 flex items-center justify-center bg-gray-100">
-                        <img 
-                        src=""      
-                        class="max-w-full max-h-full object-contain mix-blend-multiply">
-                    </div>
+                    <div class="border border-gray-300 p-2 flex items-center justify-center bg-white"><img src="" class="max-w-full max-h-full object-contain"></div>
+                    <div class="border border-gray-300 p-2 flex items-center justify-center bg-gray-100"><img src="" class="max-w-full max-h-full object-contain mix-blend-multiply"></div>
                 </div>
-
                 <div class="mb-8 shrink-0">
-                    <div class="bg-[#004a8f] text-white text-center py-2 font-bold text-sm">
-                        DX-Y63A 碳纤维复合材料航空螺旋桨
-                    </div>
+                    <div class="bg-[#004a8f] text-white text-center py-2 font-bold text-sm">DX-Y63A 碳纤维复合材料航空螺旋桨</div>
                     <div class="flex w-full text-xs text-center border border-gray-300 border-t-0">
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">直径</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">63 英寸<br>(约 1600 mm)</div>
-                        </div>
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定拉力</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">70 kg @<br>2000 RPM</div>
-                        </div>
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定力效</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">6.9 g/W</div>
-                        </div>
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定扭矩</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">51N·m @<br>10.7 kW</div>
-                        </div>
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">最大拉力</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">158kg @<br>3000 RPM</div>
-                        </div>
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">最大扭矩</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">116 N·m @<br>36.3 kW</div>
-                        </div>
-                        <div class="flex-1">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">适配电机参数</div>
-                            <div class="py-2 px-1 flex flex-col justify-center h-24 text-[10px]">
-                                <span>额定功率 12KW</span>
-                                <span>最大功率 40KW</span>
-                            </div>
-                        </div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">直径</div><div class="py-4 px-1 flex items-center justify-center h-24">63 英寸<br>(约 1600 mm)</div></div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定拉力</div><div class="py-4 px-1 flex items-center justify-center h-24">70 kg @<br>2000 RPM</div></div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定力效</div><div class="py-4 px-1 flex items-center justify-center h-24">6.9 g/W</div></div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定扭矩</div><div class="py-4 px-1 flex items-center justify-center h-24">51N·m @<br>10.7 kW</div></div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">最大拉力</div><div class="py-4 px-1 flex items-center justify-center h-24">158kg @<br>3000 RPM</div></div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">最大扭矩</div><div class="py-4 px-1 flex items-center justify-center h-24">116 N·m @<br>36.3 kW</div></div>
+                        <div class="flex-1"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">适配电机参数</div><div class="py-2 px-1 flex flex-col justify-center h-24 text-[10px]"><span>额定功率 12KW</span><span>最大功率 40KW</span></div></div>
                     </div>
                 </div>
-
                 <div class="mb-6 shrink-0">
-                    <h4 class="text-[#004a8f] font-bold text-sm mb-2 flex items-center">
-                        <span class="w-2 h-2 rounded-full bg-[#004a8f] mr-2"></span> 应用场景
-                    </h4>
-                    <div class="border border-gray-400 flex items-center justify-center h-32 bg-white">
-                        <img 
-                        src=""             alt="Application" class="w-full h-full object-contain">
-                    </div>
+                    <h4 class="text-[#004a8f] font-bold text-sm mb-2 flex items-center"><span class="w-2 h-2 rounded-full bg-[#004a8f] mr-2"></span> 应用场景</h4>
+                    <div class="border border-gray-400 flex items-center justify-center h-32 bg-white"><img src="" alt="Application" class="w-full h-full object-contain"></div>
                 </div>
-
                 <div class="flex-grow">
-                    <h4 class="text-[#004a8f] font-bold text-sm mb-2 flex items-center">
-                        <span class="w-2 h-2 rounded-full bg-[#004a8f] mr-2"></span> 性能曲线
-                    </h4>
+                    <h4 class="text-[#004a8f] font-bold text-sm mb-2 flex items-center"><span class="w-2 h-2 rounded-full bg-[#004a8f] mr-2"></span> 性能曲线</h4>
                     <div class="grid grid-cols-2 gap-4 h-40">
-                        <div class="border border-gray-400 p-1 flex items-center justify-center">
-                            <img 
-                            src=""           
-                            class="w-full h-full object-contain">
-                        </div>
-                        <div class="border border-gray-400 p-1 flex items-center justify-center">
-                            <img 
-                            src=""                    
-                            class="w-full h-full object-contain">
-                        </div>
+                        <div class="border border-gray-400 p-1 flex items-center justify-center"><img src="" class="w-full h-full object-contain"></div>
+                        <div class="border border-gray-400 p-1 flex items-center justify-center"><img src="" class="w-full h-full object-contain"></div>
                     </div>
                 </div>
-
                 <div class="w-full h-10 shrink-0"></div>
             </div>
-
-            <!-- 右页：DX-Y72C -->
             <div class="w-full md:w-1/2 p-8 md:p-12 pb-40 relative bg-white flex flex-col">
-                
                 <div class="absolute top-0 right-0 w-full h-8 bg-gray-50 border-b border-gray-200 flex items-center justify-between px-4 overflow-hidden flex-row-reverse">
-                    <div class="bg-[#004a8f] text-white text-[10px] px-4 h-full flex items-center skew-x-12 -mr-4">
-                        <span class="-skew-x-12 pr-2">大横智旋 (苏州) 科技有限公司</span>
-                    </div>
+                    <div class="bg-[#004a8f] text-white text-[10px] px-4 h-full flex items-center skew-x-12 -mr-4"><span class="-skew-x-12 pr-2">大横智旋 (苏州) 科技有限公司</span></div>
                     <span class="text-[10px] text-gray-500">专注电驱螺旋桨技术创新，赋能绿色航空飞行实践</span>
                 </div>
-
                 <div class="mt-8 mb-6">
                     <h3 class="text-xs text-gray-400 uppercase tracking-wider font-sans">PERFORMANCE INDEX - DX-Y72C</h3>
                     <h2 class="text-3xl font-bold text-[#004a8f] mt-1">DX-Y72C</h2>
                     <div class="w-12 h-1 bg-[#004a8f] mt-2"></div>
                 </div>
-
                 <div class="grid grid-cols-2 gap-4 mb-6 h-48 shrink-0">
-                    <div class="border border-gray-300 p-2 flex items-center justify-center bg-white">
-                        <img 
-                        src=""                 
-                        class="max-w-full max-h-full object-contain">
-                    </div>
-                    <div class="border border-gray-300 p-2 flex items-center justify-center bg-gray-100">
-                        <img 
-                        src=""     
-                        class="max-w-full max-h-full object-contain mix-blend-multiply">
-                    </div>
+                    <div class="border border-gray-300 p-2 flex items-center justify-center bg-white"><img src="" class="max-w-full max-h-full object-contain"></div>
+                    <div class="border border-gray-300 p-2 flex items-center justify-center bg-gray-100"><img src="" class="max-w-full max-h-full object-contain mix-blend-multiply"></div>
                 </div>
-
                 <div class="mb-8 shrink-0">
-                    <div class="bg-[#004a8f] text-white text-center py-2 font-bold text-sm">
-                        DX-Y72C 碳纤维复合材料航空螺旋桨
-                    </div>
+                    <div class="bg-[#004a8f] text-white text-center py-2 font-bold text-sm">DX-Y72C 碳纤维复合材料航空螺旋桨</div>
                     <div class="flex w-full text-xs text-center border border-gray-300 border-t-0">
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">直径</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">72 英寸<br>(约 1830 mm)</div>
-                        </div>
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定拉力</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">95 kg @<br>1800 RPM</div>
-                        </div>
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定力效</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">6.6 g/W</div>
-                        </div>
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定扭矩</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">75 N·m @<br>14 kW</div>
-                        </div>
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">最大拉力</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">180kg @<br>2500 RPM</div>
-                        </div>
-                        <div class="flex-1 border-r border-gray-300">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">最大扭矩</div>
-                            <div class="py-4 px-1 flex items-center justify-center h-24">142 N·m @<br>37 kW</div>
-                        </div>
-                        <div class="flex-1">
-                            <div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">适配电机参数</div>
-                            <div class="py-2 px-1 flex flex-col justify-center h-24 text-[10px]">
-                                <span>额定功率 15KW</span>
-                                <span>最大功率 42KW</span>
-                            </div>
-                        </div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">直径</div><div class="py-4 px-1 flex items-center justify-center h-24">72 英寸<br>(约 1830 mm)</div></div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定拉力</div><div class="py-4 px-1 flex items-center justify-center h-24">95 kg @<br>1800 RPM</div></div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定力效</div><div class="py-4 px-1 flex items-center justify-center h-24">6.6 g/W</div></div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">额定扭矩</div><div class="py-4 px-1 flex items-center justify-center h-24">75 N·m @<br>14 kW</div></div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">最大拉力</div><div class="py-4 px-1 flex items-center justify-center h-24">180kg @<br>2500 RPM</div></div>
+                        <div class="flex-1 border-r border-gray-300"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">最大扭矩</div><div class="py-4 px-1 flex items-center justify-center h-24">142 N·m @<br>37 kW</div></div>
+                        <div class="flex-1"><div class="bg-gray-100 py-2 font-bold text-gray-700 border-b border-gray-300">适配电机参数</div><div class="py-2 px-1 flex flex-col justify-center h-24 text-[10px]"><span>额定功率 15KW</span><span>最大功率 42KW</span></div></div>
                     </div>
                 </div>
-
                 <div class="mb-6 shrink-0">
-                    <h4 class="text-[#004a8f] font-bold text-sm mb-2 flex items-center">
-                        <span class="w-2 h-2 rounded-full bg-[#004a8f] mr-2"></span> 应用场景
-                    </h4>
-                    <div class="border border-gray-400 flex items-center justify-center h-32 bg-white">
-                        <img 
-                        src=""               
-                        alt="Application" class="w-full h-full object-contain">
-                    </div>
+                    <h4 class="text-[#004a8f] font-bold text-sm mb-2 flex items-center"><span class="w-2 h-2 rounded-full bg-[#004a8f] mr-2"></span> 应用场景</h4>
+                    <div class="border border-gray-400 flex items-center justify-center h-32 bg-white"><img src="" alt="Application" class="w-full h-full object-contain"></div>
                 </div>
-
                 <div class="flex-grow">
-                    <h4 class="text-[#004a8f] font-bold text-sm mb-2 flex items-center">
-                        <span class="w-2 h-2 rounded-full bg-[#004a8f] mr-2"></span> 性能曲线
-                    </h4>
+                    <h4 class="text-[#004a8f] font-bold text-sm mb-2 flex items-center"><span class="w-2 h-2 rounded-full bg-[#004a8f] mr-2"></span> 性能曲线</h4>
                     <div class="grid grid-cols-2 gap-4 h-40">
-                        <div class="border border-gray-400 p-1 flex items-center justify-center">
-                            <img 
-                            src=""                       
-                            class="w-full h-full object-contain">
-                        </div>
-                        <div class="border border-gray-400 p-1 flex items-center justify-center">
-                            <img 
-                            src=""                      
-                            class="w-full h-full object-contain">
-                        </div>
+                        <div class="border border-gray-400 p-1 flex items-center justify-center"><img src="" class="w-full h-full object-contain"></div>
+                        <div class="border border-gray-400 p-1 flex items-center justify-center"><img src="" class="w-full h-full object-contain"></div>
                     </div>
                 </div>
-
                 <div class="w-full h-10 shrink-0"></div>
-
             </div>
         </div>
     </section>
-
-
-
-       <!-- ==================== 7-8. DH-Y800A & 定制化案例封面 ==================== -->
     <section class="w-full bg-gray-100 py-10 flex justify-center overflow-hidden">
         
+        <!-- 局部样式 -->
         <style>
             .font-song { font-family: "SimSun", "Songti SC", "Noto Serif SC", serif; }
             @keyframes pulse-slow { 0%, 100% { box-shadow: 0 0 20px rgba(255,255,255,0.1); } 50% { box-shadow: 0 0 40px rgba(255,255,255,0.3); } }
             .animate-pulse-slow { animation: pulse-slow 4s infinite; }
         </style>
 
+        <!-- 核心容器 -->
         <div class="w-full max-w-[1400px] bg-white shadow-2xl flex flex-col md:flex-row overflow-hidden rounded-sm">
             
-            <!-- 左页：DH-Y800A 详情 -->
+            <!-- ==================== 左页：DH-Y800A 详情 ==================== -->
             <div class="w-full md:w-1/2 p-8 md:p-12 border-r border-gray-200 relative flex flex-col">
                 
+                <!-- 顶部页眉条 -->
                 <div class="absolute top-0 left-0 w-full h-10 bg-gray-50 border-b border-gray-200 flex items-center justify-between px-6 overflow-hidden">
                     <div class="bg-[#004a8f] text-white text-[10px] px-6 h-full flex items-center skew-x-12 -ml-6">
                         <span class="-skew-x-12 pl-2 font-bold">大横智旋 (苏州) 科技有限公司</span>
@@ -709,6 +386,7 @@
                     <span class="text-[10px] text-gray-500">专注电驱螺旋桨技术创新，赋能绿色航空飞行实践</span>
                 </div>
 
+                <!-- 标题区域 -->
                 <div class="mt-10 mb-6">
                     <h3 class="text-[10px] text-gray-400 uppercase tracking-wider font-sans font-bold">STANDARD PARTS SHELF PRODUCTS - DH-Y800A DUCTED PROPELLER</h3>
                     <h2 class="text-2xl font-bold text-[#004a8f] mt-2 flex items-center gap-3">
@@ -716,6 +394,7 @@
                     </h2>
                 </div>
 
+                <!-- 1. 核心参数表格 -->
                 <div class="w-full mb-8">
                     <table class="w-full text-xs text-center border-collapse border border-gray-300">
                         <thead>
@@ -740,22 +419,32 @@
                     </table>
                 </div>
 
+                <!-- 2. 设计图区域 (图片版 - 等待填充 Base64) -->
                 <div class="mb-8 shrink-0">
                     <h4 class="text-[#004a8f] font-bold text-sm mb-3 flex items-center">
                         <span class="w-2 h-2 rounded-full bg-[#004a8f] mr-2"></span> 设计图
                     </h4>
                     <div class="flex gap-4 h-40">
+                        
+                        <!-- 左图：正视图 (Front View) -->
                         <div class="w-1/3 border border-gray-300 p-1 flex items-center justify-center bg-white">
+                            <!-- ⚠️ 请在 src 中粘贴【正视图】的 Base64 -->
                             <img 
+                            
                             src=""                       class="max-w-full max-h-full object-contain" alt="Front View">
                         </div>
+
+                        <!-- 右图：侧视图 (Side View) -->
                         <div class="w-2/3 border border-gray-300 p-1 flex items-center justify-center bg-white">
+                            <!-- ⚠️ 请在 src 中粘贴【侧视图】的 Base64 -->
                             <img 
+                            
                             src=""                             class="max-w-full max-h-full object-contain" alt="Side View">
                         </div>
                     </div>
                 </div>
 
+                <!-- 3. 性能数据表格 -->
                 <div class="w-full flex-grow">
                     <h4 class="text-[#004a8f] font-bold text-sm mb-2 flex items-center">
                         <span class="w-2 h-2 rounded-full bg-[#004a8f] mr-2"></span> 性能数据
@@ -783,21 +472,27 @@
                 </div>
             </div>
 
-            <!-- 右页：定制化系列案例 -->
+            <!-- ==================== 右页：定制化系列案例 (全蓝封面) ==================== -->
             <div class="w-full md:w-1/2 relative bg-[#0b4da2] overflow-hidden flex items-center justify-center">
                 
+                <!-- 1. 背景图层 (等待填充 Base64) -->
                 <div class="absolute inset-0 w-full h-full z-0">
+                    <!-- ⚠️ 请在 src 中粘贴【握手/城市背景】的 Base64 -->
                     <img 
+                    
                     src=""                   
                     class="w-full h-full object-cover opacity-30 mix-blend-luminosity" alt="Background">
                     <div class="absolute inset-0 bg-[#0b4da2] opacity-60 mix-blend-multiply"></div>
                 </div>
 
+                <!-- 2. 装饰性圆环 -->
                 <div class="relative z-10 w-[360px] h-[360px] rounded-full border border-white/20 flex items-center justify-center animate-pulse-slow">
+                    <!-- 装饰点 -->
                     <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1.5 w-2 h-2 bg-white rounded-full shadow-[0_0_10px_white]"></div>
                     <div class="absolute bottom-[20%] right-0 w-2 h-2 bg-white/80 rounded-full"></div>
                     <div class="absolute top-[30%] left-0 w-2 h-2 bg-white/80 rounded-full"></div>
 
+                    <!-- 核心发光圆 -->
                     <div class="w-[280px] h-[280px] rounded-full bg-gradient-to-b from-white/90 to-white/40 backdrop-blur-md border border-white/50 shadow-[0_0_50px_rgba(255,255,255,0.2)] flex flex-col items-center justify-center text-center">
                         <h2 class="text-5xl text-[#0b4da2] font-song font-bold mb-2 tracking-widest drop-shadow-sm">定制化</h2>
                         <h3 class="text-4xl text-[#0b4da2] font-song font-bold mb-4 tracking-wider">系列案例</h3>
@@ -806,6 +501,7 @@
                     </div>
                 </div>
 
+                <!-- 3. 底部装饰弧线 -->
                 <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#002a5c] to-transparent opacity-80"></div>
 
             </div>
@@ -815,3 +511,645 @@
 
 
     <style>
+        /* 简单的光晕动画 */
+        @keyframes pulse-slow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255,255,255,0.1); }
+            50% { box-shadow: 0 0 40px rgba(255,255,255,0.3); }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 4s infinite;
+        }
+        .shadow-glow {
+            box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+        }
+    </style>
+
+
+ <!-- ==================== 案例一：分布式电推进无人机高效动力组件 (间距优化版) ==================== -->
+<section class="w-full bg-gray-100 py-10 flex justify-center overflow-hidden">
+    
+    <!-- 局部样式 -->
+    <style>
+        .blue-header { background-color: #004a8f; }
+        .blue-text { color: #004a8f; }
+    </style>
+
+    <!-- 核心容器：1400px 宽度模拟双页 -->
+    <div class="w-full max-w-[1400px] bg-white shadow-2xl flex flex-col md:flex-row overflow-hidden rounded-sm">
+        
+        <!-- ==================== 左页 (Page 9) ==================== -->
+        <div class="w-full md:w-1/2 border-r border-gray-200 relative flex flex-col">
+            
+            <!-- 顶部页眉 (左侧版) -->
+            <div class="w-full h-8 bg-gray-100 flex items-center justify-between mb-8">
+                <div class="flex items-center h-full">
+                    <!-- 蓝色梯形块 -->
+                    <div class="blue-header text-white text-[10px] px-4 h-full flex items-center font-bold skew-x-12 -ml-2">
+                        <span class="-skew-x-12">大横智旋 (苏州) 科技有限公司</span>
+                    </div>
+                </div>
+                <span class="text-[10px] text-gray-500 pr-4">专注电驱螺旋桨技术创新，赋能绿色航空飞行实践</span>
+            </div>
+
+            <!-- 内容区域 (底部 padding 增加到 pb-16，防止图片底部被遮挡) -->
+            <div class="px-10 pb-16 flex flex-col h-full">
+                
+                <!-- 标题 -->
+                <div class="flex items-center gap-2 mb-6 shrink-0">
+                    <div class="w-3 h-3 rounded-full blue-header shadow-sm"></div>
+                    <div class="h-[2px] w-6 bg-blue-800"></div>
+                    <h1 class="text-lg font-bold text-gray-800">案例一：分布式电推进无人机高效动力组件</h1>
+                </div>
+
+                <!-- 文本列表 -->
+                <div class="space-y-3 text-xs text-gray-700 mb-8 leading-relaxed shrink-0">
+                    <p><span class="blue-text font-bold mr-1">■</span> <span class="font-bold">需求方：</span>某分布式电推进无人机的整机厂</p>
+                    <p><span class="blue-text font-bold mr-1">■</span> <span class="font-bold">应用场景：</span>适用于长航时侦察监测、物流投送、城市低空应用等场景</p>
+                    <div class="flex items-start">
+                        <span class="blue-text font-bold mr-1 mt-[2px] shrink-0">■</span> 
+                        <span><span class="font-bold">痛点：</span>推进效率不足，续航时间短、任务半径受限。严苛重量约束，需要在轻量化与冗余安全之间平衡。单/双发架构的容错能力不足</span>
+                    </div>
+                    <p><span class="blue-text font-bold mr-1">■</span> <span class="font-bold">我司解决方案：</span></p>
+                </div>
+
+                <!-- 图片区域 1: 设计图 (增加 mb-10 拉开与下方图片的距离) -->
+                <div class="mb-10 shrink-0">
+                    <h3 class="flex items-center text-sm font-bold text-gray-800 mb-3">
+                        <span class="w-2 h-2 rounded-full blue-header mr-2"></span> 设计图
+                    </h3>
+                    <!-- 高度调整为 h-40，适合宽幅图片 -->
+                    <div class="grid grid-cols-2 gap-6 h-40">
+                        <!-- 左图：线稿 -->
+                        <div class="border border-gray-300 p-2 flex items-center justify-center bg-white">
+                            <!-- ⚠️ 图片占位符 1 -->
+                            <img 
+                            
+                            src=""                   
+                            class="w-full h-full object-contain" alt="Design Drawing 1">
+                        </div>
+                        <!-- 右图：渲染图 -->
+                        <div class="border border-gray-300 p-2 flex items-center justify-center bg-white">
+                            <!-- ⚠️ 图片占位符 2 -->
+                            <img 
+                            
+                            src=""                    
+                            class="w-full h-full object-contain" alt="Design Drawing 2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 图片区域 2: 风洞实测数据 (高度增加，防止遮挡) -->
+                <div class="shrink-0">
+                    <h3 class="flex items-center text-sm font-bold text-gray-800 mb-3">
+                        <span class="w-2 h-2 rounded-full blue-header mr-2"></span> 风洞实测数据
+                    </h3>
+                    <!-- 高度增加到 h-64，因为热力图是方形且有坐标轴，需要更多纵向空间 -->
+                    <div class="grid grid-cols-2 gap-6 h-64">
+                        <!-- 左图：热力图1 -->
+                        <div class="border border-gray-300 p-2 flex items-center justify-center bg-white">
+                            <!-- ⚠️ 图片占位符 3 -->
+                            <img 
+                            
+                            src=""                       
+                            class="w-full h-full object-contain" alt="Wind Tunnel Data 1">
+                        </div>
+                        <!-- 右图：热力图2 -->
+                        <div class="border border-gray-300 p-2 flex items-center justify-center bg-white">
+                            <!-- ⚠️ 图片占位符 4 -->
+                            <img 
+                            
+                            src=""                         
+                            class="w-full h-full object-contain" alt="Wind Tunnel Data 2">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 底部弹性留白 -->
+                <div class="flex-grow"></div>
+
+            </div>
+        </div>
+
+        <!-- ==================== 右页 (Page 10) ==================== -->
+        <div class="w-full md:w-1/2 relative flex flex-col">
+            
+            <!-- 顶部页眉 (右侧版 - 镜像) -->
+            <div class="w-full h-8 bg-gray-100 flex items-center justify-between mb-12">
+                <span class="text-[10px] text-gray-500 pl-4">专注电驱螺旋桨技术创新，赋能绿色航空飞行实践</span>
+                <div class="flex items-center h-full">
+                    <!-- 蓝色梯形块 -->
+                    <div class="blue-header text-white text-[10px] px-4 h-full flex items-center font-bold skew-x-12 -mr-2">
+                        <span class="-skew-x-12">大横智旋 (苏州) 科技有限公司</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 内容区域 -->
+            <div class="px-10 pb-16 flex flex-col h-full">
+                
+                <!-- 表格 -->
+                <div class="w-full mb-10 shrink-0">
+                    <table class="w-full text-xs border-collapse border border-gray-300 shadow-sm">
+                        <thead>
+                            <tr class="blue-header text-white h-10">
+                                <th class="w-1/2 border-r border-blue-400 font-bold tracking-wider">性能指标</th>
+                                <th class="w-1/2 font-bold tracking-wider">实测数据</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center text-gray-700">
+                            <tr class="bg-white h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">桨叶直径</td>
+                                <td class="font-medium">40 英寸</td>
+                            </tr>
+                            <tr class="bg-gray-100 h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">巡航拉力</td>
+                                <td class="font-medium">13kg</td>
+                            </tr>
+                            <tr class="bg-white h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">巡航效率</td>
+                                <td class="font-medium">87%</td>
+                            </tr>
+                            <tr class="bg-gray-100 h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">巡航功率</td>
+                                <td class="font-medium">14kW</td>
+                            </tr>
+                            <tr class="bg-white h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">爬升拉力</td>
+                                <td class="font-medium">46kg</td>
+                            </tr>
+                            <tr class="bg-gray-100 h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">峰值静拉力</td>
+                                <td class="font-medium">70kg</td>
+                            </tr>
+                            <tr class="bg-white h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">峰值功率</td>
+                                <td class="font-medium">28kW</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 案例小结 -->
+                <div class="mt-10 shrink-0">
+                    <h3 class="flex items-center text-sm font-bold text-gray-800 mb-3">
+                        <span class="w-2 h-2 rounded-full blue-header mr-2"></span> 案例小结
+                    </h3>
+                    <p class="text-xs text-gray-600 leading-loose text-justify">
+                        设计上采用气动性能更优的定制翼型，并通过桨毂一体化结构设计，在提升气动效率的同时增强了整体刚度与可靠性。与客户指定电机进行了深入的协同优化，通过动态模拟与实测调试实现动力与负载间的最佳工作点匹配。在满足拉力要求前提下提升推进效率至87%！
+                    </p>
+                </div>
+
+                <!-- 底部留白 (Flex grow 确保下方有足够的空白区域) -->
+                <div class="flex-grow min-h-[80px]"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+   <!-- ==================== 案例二：适配某六吨级无人机高效大功率电推进系统 (优化间距版) ==================== -->
+<section class="w-full bg-gray-100 py-10 flex justify-center overflow-hidden">
+    
+    <!-- 局部样式 -->
+    <style>
+        .blue-header { background-color: #004a8f; }
+        .blue-text { color: #004a8f; }
+    </style>
+
+    <!-- 核心容器：1400px 宽度模拟双页 -->
+    <div class="w-full max-w-[1400px] bg-white shadow-2xl flex flex-col md:flex-row overflow-hidden rounded-sm">
+        
+        <!-- ==================== 左页 (Page 11) ==================== -->
+        <div class="w-full md:w-1/2 border-r border-gray-200 relative flex flex-col">
+            
+            <!-- 顶部页眉 (左侧版) -->
+            <div class="w-full h-8 bg-gray-100 flex items-center justify-between mb-8">
+                <div class="flex items-center h-full">
+                    <!-- 蓝色梯形块 -->
+                    <div class="blue-header text-white text-[10px] px-4 h-full flex items-center font-bold skew-x-12 -ml-2">
+                        <span class="-skew-x-12">大横智旋 (苏州) 科技有限公司</span>
+                    </div>
+                </div>
+                <span class="text-[10px] text-gray-500 pr-4">专注电驱螺旋桨技术创新，赋能绿色航空飞行实践</span>
+            </div>
+
+            <!-- 内容区域 (底部 padding pb-16 确保底部留白) -->
+            <div class="px-10 pb-16 flex flex-col h-full">
+                
+                <!-- 标题 -->
+                <div class="flex items-center gap-2 mb-6 shrink-0">
+                    <div class="w-3 h-3 rounded-full blue-header shadow-sm"></div>
+                    <div class="h-[2px] w-6 bg-blue-800"></div>
+                    <h1 class="text-lg font-bold text-gray-800">案例二：适配某六吨级无人机高效大功率电推进系统</h1>
+                </div>
+
+                <!-- 文本列表 -->
+                <div class="space-y-3 text-xs text-gray-700 mb-8 leading-relaxed shrink-0">
+                    <p><span class="blue-text font-bold mr-1">■</span> <span class="font-bold">需求方：</span>某大型无人机平台 (吨级)</p>
+                    <p><span class="blue-text font-bold mr-1">■</span> <span class="font-bold">应用场景：</span>涵盖军用/民用长航时飞行器、察打一体无人机、货运无人机等</p>
+                    <div class="flex items-start">
+                        <span class="blue-text font-bold mr-1 mt-[2px] shrink-0">■</span> 
+                        <span><span class="font-bold">痛点：</span>飞行器起飞重量大 (吨级)，对大功率密度推进系统需求高。长航时/长航程任务，需要高效能量利用。客户不希望在飞行中引入复杂的变距机构，担心重量、可靠性和维护问题。</span>
+                    </div>
+                    <p><span class="blue-text font-bold mr-1">■</span> <span class="font-bold">我司解决方案：</span></p>
+                </div>
+
+                <!-- 图片区域 1: 设计图 (保留 mb-10 间距) -->
+                <div class="mb-10 shrink-0">
+                    <h3 class="flex items-center text-sm font-bold text-gray-800 mb-3">
+                        <span class="w-2 h-2 rounded-full blue-header mr-2"></span> 设计图
+                    </h3>
+                    <div class="grid grid-cols-2 gap-6 h-40">
+                        <!-- 左图：线稿 -->
+                        <div class="border border-gray-300 p-2 flex items-center justify-center bg-white">
+                            <!-- ⚠️ 图片占位符 1 -->
+                            <img 
+                            
+                            src=""                           
+                            class="w-full h-full object-contain" alt="Design Wireframe">
+                        </div>
+                        <!-- 右图：渲染图 -->
+                        <div class="border border-gray-300 p-2 flex items-center justify-center bg-white">
+                            <!-- ⚠️ 图片占位符 2 -->
+                            <img 
+                            
+                            src=""                       
+                            class="w-full h-full object-contain" alt="3D Render">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 图片区域 2: 实测数据 (曲线图) -->
+                <div class="shrink-0">
+                    <h3 class="flex items-center text-sm font-bold text-gray-800 mb-3">
+                        <span class="w-2 h-2 rounded-full blue-header mr-2"></span> 实测数据
+                    </h3>
+                    <!-- 高度设为 h-48，适合展示方形/略高的曲线图 -->
+                    <div class="grid grid-cols-2 gap-6 h-48">
+                        <!-- 左图：曲线图1 -->
+                        <div class="border border-gray-300 p-2 flex items-center justify-center bg-white">
+                            <!-- ⚠️ 图片占位符 3 -->
+                            <img 
+                            
+                            src=""                   
+                            class="w-full h-full object-contain" alt="Graph 1">
+                        </div>
+                        <!-- 右图：曲线图2 -->
+                        <div class="border border-gray-300 p-2 flex items-center justify-center bg-white">
+                            <!-- ⚠️ 图片占位符 4 -->
+                            <img 
+                            
+                            src=""                      
+                            class="w-full h-full object-contain" alt="Graph 2">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 底部弹性留白 -->
+                <div class="flex-grow"></div>
+
+            </div>
+        </div>
+
+        <!-- ==================== 右页 (Page 12) ==================== -->
+        <div class="w-full md:w-1/2 relative flex flex-col">
+            
+            <!-- 顶部页眉 (右侧版 - 镜像) -->
+            <div class="w-full h-8 bg-gray-100 flex items-center justify-between mb-12">
+                <span class="text-[10px] text-gray-500 pl-4">专注电驱螺旋桨技术创新，赋能绿色航空飞行实践</span>
+                <div class="flex items-center h-full">
+                    <!-- 蓝色梯形块 -->
+                    <div class="blue-header text-white text-[10px] px-4 h-full flex items-center font-bold skew-x-12 -mr-2">
+                        <span class="-skew-x-12">大横智旋 (苏州) 科技有限公司</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 内容区域 -->
+            <div class="px-10 pb-16 flex flex-col h-full">
+                
+                <!-- 表格 -->
+                <div class="w-full mb-10 shrink-0">
+                    <table class="w-full text-xs border-collapse border border-gray-300 shadow-sm">
+                        <thead>
+                            <tr class="blue-header text-white h-10">
+                                <th class="w-1/2 border-r border-blue-400 font-bold tracking-wider">核心指标</th>
+                                <th class="w-1/2 font-bold tracking-wider">实测数据</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center text-gray-700">
+                            <tr class="bg-white h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">桨叶直径</td>
+                                <td class="font-medium">1.7m</td>
+                            </tr>
+                            <tr class="bg-gray-100 h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">变距型式</td>
+                                <td class="font-medium">地面可调变距</td>
+                            </tr>
+                            <tr class="bg-white h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">巡航拉力</td>
+                                <td class="font-medium">55kg</td>
+                            </tr>
+                            <tr class="bg-gray-100 h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">巡航效率</td>
+                                <td class="font-medium">85%</td>
+                            </tr>
+                            <tr class="bg-white h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">爬升拉力</td>
+                                <td class="font-medium">270kg</td>
+                            </tr>
+                            <tr class="bg-gray-100 h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">峰值拉力</td>
+                                <td class="font-medium">350kg</td>
+                            </tr>
+                            <tr class="bg-white h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">峰值功率</td>
+                                <td class="font-medium">200kW</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 案例小结 -->
+                <div class="mt-10 shrink-0">
+                    <h3 class="flex items-center text-sm font-bold text-gray-800 mb-3">
+                        <span class="w-2 h-2 rounded-full blue-header mr-2"></span> 案例小结
+                    </h3>
+                    <p class="text-xs text-gray-600 leading-loose text-justify">
+                        使用地面可调桨距螺旋桨。快速调整桨距并具备角度定位与锁定功能，可实现 10-15 分钟内完成调节/更换。在不同桨距设定下，桨叶扭转/弦长分布保持升力效率最优，减少巡航能耗 5-10%。高精度加工和动平衡控制，保证每副桨在不同调节角度下性能稳定，振动与噪声控制优于传统定距桨。同一副桨叶可适配多种任务谱，降低备件种类与全寿命周期成本！
+                    </p>
+                </div>
+
+                <!-- 底部留白 (Flex grow 确保下方有足够的空白区域) -->
+                <div class="flex-grow min-h-[80px]"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ==================== 案例三：适配某高原无人机螺旋桨 (高原工况版) ==================== -->
+<section class="w-full bg-gray-100 py-10 flex justify-center overflow-hidden">
+    
+    <!-- 局部样式 -->
+    <style>
+        .blue-header { background-color: #004a8f; }
+        .blue-text { color: #004a8f; }
+    </style>
+
+    <!-- 核心容器：1400px 宽度模拟双页 -->
+    <div class="w-full max-w-[1400px] bg-white shadow-2xl flex flex-col md:flex-row overflow-hidden rounded-sm">
+        
+        <!-- ==================== 左页 (Page 13) ==================== -->
+        <div class="w-full md:w-1/2 border-r border-gray-200 relative flex flex-col">
+            
+            <!-- 顶部页眉 (左侧版) -->
+            <div class="w-full h-8 bg-gray-100 flex items-center justify-between mb-8">
+                <div class="flex items-center h-full">
+                    <!-- 蓝色梯形块 -->
+                    <div class="blue-header text-white text-[10px] px-4 h-full flex items-center font-bold skew-x-12 -ml-2">
+                        <span class="-skew-x-12">大横智旋 (苏州) 科技有限公司</span>
+                    </div>
+                </div>
+                <span class="text-[10px] text-gray-500 pr-4">专注电驱螺旋桨技术创新，赋能绿色航空飞行实践</span>
+            </div>
+
+            <!-- 内容区域 (保持 pb-16 底部留白) -->
+            <div class="px-10 pb-16 flex flex-col h-full">
+                
+                <!-- 标题 -->
+                <div class="flex items-center gap-2 mb-6 shrink-0">
+                    <div class="w-3 h-3 rounded-full blue-header shadow-sm"></div>
+                    <div class="h-[2px] w-6 bg-blue-800"></div>
+                    <h1 class="text-lg font-bold text-gray-800">案例三：适配某高原无人机螺旋桨</h1>
+                </div>
+
+                <!-- 文本列表 -->
+                <div class="space-y-3 text-xs text-gray-700 mb-8 leading-relaxed shrink-0">
+                    <p><span class="blue-text font-bold mr-1">■</span> <span class="font-bold">需求方：</span>无人机用户</p>
+                    <p><span class="blue-text font-bold mr-1">■</span> <span class="font-bold">应用场景：</span>高原 / 高海拔地区执行任务</p>
+                    <div class="flex items-start">
+                        <span class="blue-text font-bold mr-1 mt-[2px] shrink-0">■</span> 
+                        <span><span class="font-bold">痛点：</span>高原空气稀薄 (气压低、密度低)，桨叶推力不足，导致起飞/爬升能力下降。高海拔/低温/大温差环境下，材料疲劳与螺旋桨强度/刚度达不到预期</span>
+                    </div>
+                    <p><span class="blue-text font-bold mr-1">■</span> <span class="font-bold">我司解决方案：</span></p>
+                </div>
+
+                <!-- 图片区域 1: 设计图 (保持 mb-10 间距) -->
+                <div class="mb-10 shrink-0">
+                    <h3 class="flex items-center text-sm font-bold text-gray-800 mb-3">
+                        <span class="w-2 h-2 rounded-full blue-header mr-2"></span> 设计图
+                    </h3>
+                    <div class="grid grid-cols-2 gap-6 h-40">
+                        <!-- 左图：线稿 -->
+                        <div class="border border-gray-300 p-2 flex items-center justify-center bg-white">
+                            <!-- ⚠️ 图片占位符 1 -->
+                            <img 
+                            
+                            
+                            src=""                        
+                            class="w-full h-full object-contain" alt="Design Drawing 1">
+                        </div>
+                        <!-- 右图：渲染图 -->
+                        <div class="border border-gray-300 p-2 flex items-center justify-center bg-white">
+                            <!-- ⚠️ 图片占位符 2 -->
+                            <img 
+                            
+                            src=""                
+                            class="w-full h-full object-contain" alt="Design Drawing 2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 图片区域 2: 实测数据 (曲线图) -->
+                <div class="shrink-0">
+                    <h3 class="flex items-center text-sm font-bold text-gray-800 mb-3">
+                        <span class="w-2 h-2 rounded-full blue-header mr-2"></span> 实测数据
+                    </h3>
+                    <!-- 高度设为 h-48，适合展示纵轴较长的曲线图 -->
+                    <div class="grid grid-cols-2 gap-6 h-48">
+                        <!-- 左图：曲线图1 -->
+                        <div class="border border-gray-300 p-2 flex items-center justify-center bg-white">
+                            <!-- ⚠️ 图片占位符 3 -->
+                            <img 
+                            
+                            src=""                   
+                            class="w-full h-full object-contain" alt="Data Curve 1">
+                        </div>
+                        <!-- 右图：曲线图2 -->
+                        <div class="border border-gray-300 p-2 flex items-center justify-center bg-white">
+                            <!-- ⚠️ 图片占位符 4 -->
+                            <img 
+                            
+                            src=""                     
+                            class="w-full h-full object-contain" alt="Data Curve 2">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 底部弹性留白 -->
+                <div class="flex-grow"></div>
+
+            </div>
+        </div>
+
+        <!-- ==================== 右页 (Page 14) ==================== -->
+        <div class="w-full md:w-1/2 relative flex flex-col">
+            
+            <!-- 顶部页眉 (右侧版 - 镜像) -->
+            <div class="w-full h-8 bg-gray-100 flex items-center justify-between mb-12">
+                <span class="text-[10px] text-gray-500 pl-4">专注电驱螺旋桨技术创新，赋能绿色航空飞行实践</span>
+                <div class="flex items-center h-full">
+                    <!-- 蓝色梯形块 -->
+                    <div class="blue-header text-white text-[10px] px-4 h-full flex items-center font-bold skew-x-12 -mr-2">
+                        <span class="-skew-x-12">大横智旋 (苏州) 科技有限公司</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 内容区域 -->
+            <div class="px-10 pb-16 flex flex-col h-full">
+                
+                <!-- 表格 -->
+                <div class="w-full mb-10 shrink-0">
+                    <table class="w-full text-xs border-collapse border border-gray-300 shadow-sm">
+                        <thead>
+                            <tr class="blue-header text-white h-10">
+                                <th class="w-1/2 border-r border-blue-400 font-bold tracking-wider">核心指标</th>
+                                <th class="w-1/2 font-bold tracking-wider">实测数据</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center text-gray-700">
+                            <tr class="bg-white h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">桨叶直径</td>
+                                <td class="font-medium">34 英寸</td>
+                            </tr>
+                            <tr class="bg-gray-100 h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">平原巡航拉力</td>
+                                <td class="font-medium">22kg</td>
+                            </tr>
+                            <tr class="bg-white h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">平原巡航效率</td>
+                                <td class="font-medium">80%</td>
+                            </tr>
+                            <tr class="bg-gray-100 h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">平原巡航功率</td>
+                                <td class="font-medium">12kW</td>
+                            </tr>
+                            <tr class="bg-white h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">高原巡航拉力</td>
+                                <td class="font-medium">13kg</td>
+                            </tr>
+                            <tr class="bg-gray-100 h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">高原巡航效率</td>
+                                <td class="font-medium">78.56%</td>
+                            </tr>
+                            <tr class="bg-white h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">高原巡航功率</td>
+                                <td class="font-medium">7.28kW</td>
+                            </tr>
+                             <tr class="bg-gray-100 h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">峰值拉力</td>
+                                <td class="font-medium">43kg</td>
+                            </tr>
+                             <tr class="bg-white h-10 border-b border-gray-200">
+                                <td class="border-r border-gray-200">峰值功率</td>
+                                <td class="font-medium">27kW</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 案例小结 -->
+                <div class="mt-10 shrink-0">
+                    <h3 class="flex items-center text-sm font-bold text-gray-800 mb-3">
+                        <span class="w-2 h-2 rounded-full blue-header mr-2"></span> 案例小结
+                    </h3>
+                    <p class="text-xs text-gray-600 leading-loose text-justify">
+                        使用高转速一体桨，在稀薄空气环境下维持较高升力效率，叶尖马赫数抑制，效率提升 6-10%，噪声下降 2-4 dB(A)。全碳纤维复合材料一体化设计，寿命 ≥ 500 h 高原工况。模态频率与叶频解耦，热-力耦合包线校核，保证高转速可靠性。
+                    </p>
+                </div>
+
+                <!-- 底部留白 (Flex grow 确保下方有足够的空白区域) -->
+                <div class="flex-grow min-h-[80px]"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+   
+
+    <!-- ==================== Footer (带二维码版) ==================== -->
+<footer class="w-full bg-[#111827] text-white py-12 border-t-4 border-[#004a8f]">
+    
+    <!-- 核心容器：与上方案例保持一致的最大宽度 -->
+    <div class="w-full max-w-[1400px] mx-auto px-10">
+        
+        <!-- 上半部分：左右布局 -->
+        <div class="flex flex-col md:flex-row justify-between items-center md:items-start mb-10">
+            
+            <!-- 左侧：公司信息与联系方式 -->
+            <div class="text-center md:text-left mb-8 md:mb-0">
+                <h2 class="text-2xl font-bold mb-3 tracking-wide">大横智旋 (苏州) 科技有限公司</h2>
+                <p class="text-gray-400 text-sm mb-6">专注电驱螺旋桨技术创新，赋能绿色航空飞行实践</p>
+                
+                <!-- 联系方式 (图标 + 文本) -->
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8 text-sm text-gray-300 justify-center md:justify-start">
+                    <span class="flex items-center justify-center md:justify-start hover:text-white transition-colors duration-300 cursor-default">
+                        <!-- Phone Icon SVG -->
+                        <svg class="w-4 h-4 mr-2 text-[#004a8f]" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        17625008062
+                    </span>
+                    <span class="flex items-center justify-center md:justify-start hover:text-white transition-colors duration-300 cursor-pointer">
+                        <!-- Mail Icon SVG -->
+                        <svg class="w-4 h-4 mr-2 text-[#004a8f]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        liyong@dhzxtech.com
+                    </span>
+                </div>
+            </div>
+
+            <!-- 右侧：二维码区域 -->
+            <div class="flex gap-6">
+                <!-- 二维码 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 bg-white p-1 rounded-sm mb-2">
+                        <!-- ⚠️ 替换 src 为您的二维码图片 -->
+                        <img 
+                        
+                        src=""               
+                        class="w-full h-full object-cover" alt="公众号二维码">
+                    </div>
+                    <span class="text-[10px] text-gray-400">官方公众号</span>
+                </div>
+                
+                <!-- 二维码 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 bg-white p-1 rounded-sm mb-2">
+                        <!-- ⚠️ 替换 src 为您的二维码图片 -->
+                        <img 
+                        
+                        src=""                    
+                        class="w-full h-full object-cover" alt="技术咨询二维码">
+                    </div>
+                    <span class="text-[10px] text-gray-400">技术咨询</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 底部版权分割线 -->
+        <div class="pt-6 border-t border-gray-800 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
+            <p>&copy; 2023 Daheng Zhixuan Technology Co., Ltd. All Rights Reserved.</p>
+            <p class="mt-2 md:mt-0">苏ICP备XXXXXXXX号</p>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
